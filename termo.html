@@ -1,259 +1,41 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#080706" name="theme-color"/>
-<meta content="Amigos Fundadores da Engenharia da Produção Musical™. Apoie a fase fundadora do projeto a partir de R$ 10 e acompanhe a Meta Fundadora com transparência." name="description"/>
-<meta content="index,follow" name="robots"/>
-<title>Amigos Fundadores EPM | Engenharia da Produção Musical™</title>
-<link href="assets/favicon.png" rel="icon"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Playfair+Display:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css" rel="stylesheet"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080706" />
+  <meta name="robots" content="index,follow" />
+  <title>Termo de Adesão — Apoiador Fundador | Crédito Vale</title>
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-<div aria-hidden="true" class="ambient ambient-a"></div>
-<div aria-hidden="true" class="ambient ambient-b"></div>
-<div aria-hidden="true" class="grain"></div>
-<header class="site-header" id="top">
-<a aria-label="Amigos Fundadores EPM — Início" class="brand" href="#inicio">
-<picture>
-<source srcset="assets/logo-epm.webp" type="image/webp"/>
-<img alt="Engenharia da Produção Musical™" src="assets/logo-epm.png"/>
-</picture>
-<span><strong>EPM</strong><small>Amigos Fundadores</small></span>
-</a>
-<button aria-expanded="false" aria-label="Abrir menu" class="menu-toggle" type="button">☰</button>
-<nav aria-label="Navegação principal" class="main-nav">
-<a href="#meta">Meta</a>
-<a href="#destino">Destino dos recursos</a>
-<a href="#credito">Crédito Vale</a>
-<a href="#empresas">Empresas</a>
-<a class="nav-cta" href="#apoie">Quero participar</a><a href="termo.html">Termo</a>
-</nav>
-</header>
-<main>
-<section class="hero" id="inicio">
-<div class="hero-inner container">
-<div class="hero-copy reveal">
-<div class="hero-kicker"><span></span> INSTITUTO MUSICAL VALE • VALE PRODUÇÕES</div>
-<h1>Ajude a colocar de pé a <em>fase fundadora</em> da Engenharia da Produção Musical™.</h1>
-<p class="hero-lead">Uma campanha para amigos, alunos, parceiros e pessoas próximas que desejam ajudar a construir a estrutura inicial da formação profissional online — com uma meta clara, acompanhamento e registro administrativo de cada apoio.</p>
-<div class="hero-actions">
-<a class="btn btn-gold" href="#apoie">Conhecer regras e participar <span>→</span></a>
-<a class="btn btn-outline" href="#meta">Ver a meta</a>
-</div>
-<div aria-label="Destaques do programa" class="hero-points">
-<span><b>R$ 10.000</b> Meta Fundadora — Fase 1</span>
-<span><b>100%</b> do apoio recebido vira Crédito Vale</span>
-<span><b>1x</b> apoio único, sem mensalidade obrigatória</span>
-</div>
-</div>
-<aside aria-label="Identidade visual da Engenharia da Produção Musical" class="hero-visual reveal delay-1">
-<div class="visual-halo"></div>
-<div class="logo-stage">
-<picture>
-<source srcset="assets/logo-epm.webp" type="image/webp"/>
-<img alt="Logo oficial Engenharia da Produção Musical™" src="assets/logo-epm.png"/>
-</picture>
-</div>
-<div class="founder-stamp"><span>FASE 01</span><strong>AMIGOS FUNDADORES</strong><small>Construindo desde o começo.</small></div>
-</aside>
-</div>
-</section>
-<section class="campaign-strip" id="meta">
-<div class="container campaign-grid">
-<div class="campaign-copy reveal">
-<span class="eyebrow">META FUNDADORA • FASE 1</span>
-<h2>Nosso primeiro objetivo é chegar a <strong>R$ 10.000</strong>.</h2>
-<p>O valor foi dividido por finalidade para que cada pessoa saiba o que esta primeira etapa precisa sustentar.</p>
-</div>
-<div aria-live="polite" class="progress-card reveal delay-1">
-<div class="progress-top">
-<div><span>Recebido</span><strong id="publicReceived">R$ 0,00</strong></div>
-<div class="progress-percent"><strong id="publicPercent">0%</strong><span>da meta</span></div>
-</div>
-<div class="progress-track"><div class="progress-fill" id="publicProgressBar" style="width:0%"></div></div>
-<div class="progress-meta"><span>Meta: <strong>R$ 10.000,00</strong></span><span id="publicRemaining">Faltam R$ 10.000,00</span></div>
-<div class="progress-supporters"><span id="publicSupporters">0</span> apoio(s) com valor recebido <small id="publicUpdated"></small></div>
-<div class="mini-demo" hidden="" id="progressDemo">Modo demonstração: conecte o Supabase para a barra refletir os recebimentos reais registrados no painel.</div>
-</div>
-</div>
-</section>
-<section class="section" id="destino">
-<div class="container">
-<div class="section-heading centered reveal">
-<span class="eyebrow">PARA ONDE VAI A META</span>
-<h2>R$ 10.000 com destino definido.</h2>
-<p>A Meta Fundadora foi organizada em quatro frentes essenciais para colocar a primeira fase em funcionamento com estrutura, divulgação e margem para imprevistos.</p>
-</div>
-<div class="budget-grid">
-<article class="budget-card reveal">
-<div class="budget-number">01</div><div class="budget-icon">◫</div>
-<span>Infraestrutura digital</span><strong>R$ 4.200</strong>
-<p>Domínio, ferramentas online, transmissão, IA, armazenamento, suporte e serviços digitais necessários ao funcionamento inicial.</p>
-<div class="budget-bar"><i style="width:42%"></i></div><small>42% da meta</small>
-</article>
-<article class="budget-card reveal delay-1">
-<div class="budget-number">02</div><div class="budget-icon">◎</div>
-<span>Lançamento e divulgação</span><strong>R$ 3.000</strong>
-<p>Materiais de campanha, divulgação, anúncios e ações para alcançar os primeiros alunos e posicionar a formação.</p>
-<div class="budget-bar"><i style="width:30%"></i></div><small>30% da meta</small>
-</article>
-<article class="budget-card reveal delay-2">
-<div class="budget-number">03</div><div class="budget-icon">◈</div>
-<span>Produção e estrutura técnica</span><strong>R$ 2.000</strong>
-<p>Materiais, captação, gravação, edição, ajustes técnicos e necessidades práticas da produção das aulas e conteúdos.</p>
-<div class="budget-bar"><i style="width:20%"></i></div><small>20% da meta</small>
-</article>
-<article class="budget-card reveal delay-3">
-<div class="budget-number">04</div><div class="budget-icon">◇</div>
-<span>Reserva técnica</span><strong>R$ 800</strong>
-<p>Margem para variação de preços, manutenção e despesas imprevistas durante a implantação da primeira fase.</p>
-<div class="budget-bar"><i style="width:8%"></i></div><small>8% da meta</small>
-</article>
-</div>
-<div class="milestones reveal">
-<div class="milestone" data-threshold="25"><b>25%</b><span>R$ 2.500</span><small>Primeira estrutura operacional</small></div>
-<div class="milestone" data-threshold="50"><b>50%</b><span>R$ 5.000</span><small>Infraestrutura e produção avançam</small></div>
-<div class="milestone" data-threshold="75"><b>75%</b><span>R$ 7.500</span><small>Lançamento e expansão</small></div>
-<div class="milestone" data-threshold="100"><b>100%</b><span>R$ 10.000</span><small>Fase 1 concluída</small></div>
-</div>
-</div>
-</section>
-<section class="section pre-adhesion-section" id="como-funciona">
-<div class="container">
-<div class="section-heading centered reveal">
-<span class="eyebrow">ADESÃO TRANSPARENTE EM 3 ETAPAS</span>
-<h2>Você conhece as regras antes de escolher o valor.</h2>
-<p>Primeiro mostramos as condições essenciais do Crédito Vale. Depois o Termo completo fica disponível para leitura. Somente na terceira etapa aparecem valor, forma de pagamento e o aceite obrigatório.</p>
-</div>
-<div class="adhesion-preview reveal">
-<div><b>1</b><strong>Quadro-resumo</strong><span>Limites e condições mais importantes em destaque.</span></div>
-<i>→</i>
-<div><b>2</b><strong>Termo completo</strong><span>Versão 1.0 — agosto de 2026, disponível antes da adesão.</span></div>
-<i>→</i>
-<div><b>3</b><strong>Escolha e aceite</strong><span>Valor, pagamento, dados e checkbox obrigatório aparecem só depois.</span></div>
-</div>
-</div>
-</section>
-<section class="section credit-section" id="credito">
-<div class="container">
-<div class="section-heading centered reveal">
-<span class="eyebrow">CRÉDITO VALE • CONDIÇÃO ESSENCIAL</span>
-<h2>100% do apoio recebido vira saldo nominal de Crédito Vale.</h2>
-<p class="credit-rule-emphasis">O percentual de utilização varia conforme o produto ou serviço.</p>
-<p>Isso significa que R$ 100 de apoio geram R$ 100 de saldo, mas esse saldo não necessariamente pode quitar 100% de qualquer compra. Os limites principais ficam visíveis antes do valor e do aceite.</p>
-</div>
-<div class="credit-rules-grid">
-<article class="rule-card reveal"><span>E-BOOKS ELEGÍVEIS</span><strong>Até 100%</strong><p>Limitado ao saldo e às possibilidades técnicas/comerciais da plataforma.</p></article>
-<article class="rule-card critical reveal delay-1"><span>LIVROS IMPRESSOS</span><strong>Até R$ 20 por exemplar</strong><p>Frete e despesas externas não entram no Crédito Vale, salvo oferta expressa em contrário.</p></article>
-<article class="rule-card critical reveal delay-2"><span>PRODUÇÃO MUSICAL</span><strong>Mínimo R$ 150 em dinheiro</strong><p>Após aplicar o crédito, permanece pagamento monetário mínimo de R$ 150 por música, salvo condição expressa diferente.</p></article>
-<article class="rule-card reveal delay-3"><span>AULAS ELEGÍVEIS</span><strong>Até 100%</strong><p>Conforme saldo, disponibilidade, modalidade e regras acadêmicas/operacionais do Instituto Musical Vale.</p></article>
-</div>
-<div class="credit-legal-strip reveal">
-<strong>Também é importante saber:</strong>
-<span>não é investimento financeiro;</span>
-<span>não rende juros;</span>
-<span>não é sacável;</span>
-<span>preços futuros podem mudar;</span>
-<span>validade inicial de 24 meses, com possibilidade de uma prorrogação gratuita de 12 meses nas condições do Termo.</span>
-</div>
-<div class="center-action reveal">
-<a class="btn btn-outline" href="termo.html">Ler Termo completo</a>
-<a class="btn btn-gold" href="#apoie">Iniciar adesão</a>
-</div>
-</div>
-</section>
-<section class="section companies-section" id="empresas">
-<div class="container">
-<div class="section-heading reveal">
-<span class="eyebrow">EMPRESAS, MARCAS E PARCEIROS</span>
-<h2>Para quem deseja apoiar em outra escala.</h2>
-<p>As cotas institucionais ficam separadas do programa de Amigos Fundadores. O cadastro registra o interesse e abre uma conversa para formalização da parceria.</p>
-</div>
-<div class="sponsor-grid">
-<article class="sponsor-card reveal"><span>PARCEIRO FUNDADOR</span><strong>R$ 1.500<small>/ ano</small></strong><p>Entrada institucional para empresas e marcas que desejam estar próximas da fase de implantação.</p><button class="sponsor-select" data-amount="1500" data-tier="Parceiro Fundador" type="button">Tenho interesse</button></article>
-<article class="sponsor-card sponsor-main reveal delay-1"><div class="sponsor-tag">DESTAQUE</div><span>PATROCINADOR OFICIAL</span><strong>R$ 3.000<small>/ ano</small></strong><p>Faixa intermediária para presença institucional e desenvolvimento de parceria formal com o projeto.</p><button class="sponsor-select" data-amount="3000" data-tier="Patrocinador Oficial" type="button">Tenho interesse</button></article>
-<article class="sponsor-card reveal delay-2"><span>PATROCINADOR MASTER</span><strong>R$ 5.000<small>/ ano</small></strong><p>Cota principal para marcas interessadas em uma parceria institucional mais ampla com a EPM.</p><button class="sponsor-select" data-amount="5000" data-tier="Patrocinador Master" type="button">Tenho interesse</button></article>
-<article class="sponsor-card technical reveal delay-3"><span>PARCEIRO TÉCNICO</span><strong>Serviços ou equipamentos</strong><p>Colaboração por estrutura, tecnologia, equipamentos, divulgação ou serviços profissionais.</p><button class="sponsor-select" data-amount="" data-tier="Parceiro Técnico" type="button">Conversar sobre parceria</button></article>
-</div>
-</div>
-</section>
-<section class="section form-section" id="apoie">
-<div class="container form-layout">
-<aside class="form-aside reveal">
-<span class="eyebrow">PROGRAMA APOIADOR FUNDADOR</span>
-<h2>Adesão clara, antes de qualquer escolha.</h2>
-<p>O fluxo foi organizado para que nenhuma limitação relevante fique escondida dentro de um texto longo.</p>
-<div aria-label="Etapas da adesão" class="wizard-progress">
-<button class="wizard-dot active" data-step-dot="1" type="button"><b>1</b><span>Resumo</span></button>
-<i></i>
-<button class="wizard-dot" data-step-dot="2" type="button"><b>2</b><span>Termo</span></button>
-<i></i>
-<button class="wizard-dot" data-step-dot="3" type="button"><b>3</b><span>Adesão</span></button>
-</div>
-<div class="aside-summary" id="selectionSummary">
-<span>Modalidade</span><strong>Amigo Fundador</strong><b>O valor será exibido somente na etapa 3.</b>
-</div>
-<div class="privacy-box"><span>◉</span><div><strong>Instituto Musical Vale</strong><small>CNPJ 31.255.200/0001-19 • dados protegidos por acesso administrativo autenticado.</small></div></div>
-<div class="privacy-box"><span>✓</span><div><strong>Sem pagamento automático neste site</strong><small>O cadastro registra a adesão/interesse. A equipe confirma o meio de pagamento e o recebimento é lançado no painel.</small></div></div>
-</aside>
-<form class="premium-form wizard-form reveal delay-1" id="supportForm" novalidate="">
-<div class="demo-banner" hidden="" id="demoBanner"><strong>Modo demonstração:</strong> o Supabase ainda não foi configurado. O cadastro ficará somente neste navegador para teste.</div>
-<input aria-hidden="true" autocomplete="off" class="honeypot" id="website" name="website" tabindex="-1" type="text"/>
-<input id="supportProgram" name="support_program" type="hidden" value="Amigo Fundador"/>
-<section aria-labelledby="wizardTitle1" class="wizard-screen active" data-wizard-step="1">
-<div class="wizard-head"><span>ETAPA 1 DE 3</span><h3 id="wizardTitle1">Quadro-resumo antes da adesão</h3><p>Estas são condições essenciais. Elas aparecem antes da escolha do valor.</p></div>
-<div id="friendSummary">
-<div class="credit-summary-hero">
-<span>REGRA PRINCIPAL</span>
-<strong>100% do apoio vira Crédito Vale</strong>
-<b>O percentual de utilização varia conforme o produto ou serviço.</b>
-</div>
-<div class="summary-rules">
-<div><strong>E-books elegíveis</strong><span>Até 100% do preço, limitado ao saldo e à plataforma.</span></div>
-<div class="summary-warning"><strong>Livros impressos</strong><span><b>Máximo de R$ 20,00 de Crédito Vale por exemplar.</b> Frete e despesas externas não incluídos.</span></div>
-<div class="summary-warning"><strong>Produção musical</strong><span>Após o crédito, deve permanecer <b>mínimo de R$ 150,00 em pagamento monetário por música</b>, salvo condição expressa diferente.</span></div>
-<div><strong>Aulas — Instituto Musical Vale</strong><span>Até 100% da aula/mensalidade elegível, conforme saldo e disponibilidade.</span></div>
-<div><strong>Prazo do crédito</strong><span>Validade inicial de 24 meses; o Termo prevê possibilidade de uma prorrogação gratuita de 12 meses solicitada dentro da validade.</span></div>
-<div><strong>Natureza</strong><span>Não é investimento financeiro, não rende juros, não é sacável e não dá participação societária.</span></div>
-</div>
-<div class="summary-identity">
-<span>Responsável pelo programa</span>
-<strong>Instituto Musical Vale</strong>
-<b>CNPJ 31.255.200/0001-19</b>
-</div>
-</div>
-<div hidden="" id="businessSummary">
-<div class="credit-summary-hero business">
-<span>CADASTRO INSTITUCIONAL</span>
-<strong>Patrocínio e parceria são formalizados separadamente</strong>
-<b>Este envio registra interesse. A cota empresarial ou parceria técnica depende de instrumento próprio e confirmação da equipe.</b>
-</div>
-</div>
-<div class="wizard-actions">
-<span></span>
-<button class="btn btn-gold" id="step1Continue" type="button">Entendi o resumo <i>→</i></button>
-</div>
-</section>
-<section aria-labelledby="wizardTitle2" class="wizard-screen" data-wizard-step="2" hidden="">
-<div class="wizard-head"><span>ETAPA 2 DE 3</span><h3 id="wizardTitle2">Termo completo antes do valor</h3><p id="termStepIntro">Leia o Termo do Programa Apoiador Fundador — Crédito Vale. O botão de continuar é liberado ao chegar ao fim do documento.</p></div>
-<div id="friendTermsStep">
-<div class="term-toolbar">
-<div><strong>Termo de Adesão</strong><small>Versão 1.0 — agosto de 2026</small></div>
-<a href="termo.html" rel="noopener" target="_blank">Abrir em página completa ↗</a>
-</div>
-<div aria-label="Termo completo de adesão" class="term-scroll" id="termScroll" tabindex="0">
-<div class="embedded-term">
-<h1>TERMO DE ADESÃO AO PROGRAMA APOIADOR FUNDADOR — CRÉDITO VALE</h1>
+<body class="terms-page">
+  <header class="site-header">
+    <a class="brand" href="index.html#inicio" aria-label="Voltar para Amigos Fundadores EPM">
+      <picture><source srcset="assets/logo-epm.webp" type="image/webp" /><img src="assets/logo-epm.png" alt="Engenharia da Produção Musical™" /></picture>
+      <span><strong>EPM</strong><small>Termo de Adesão</small></span>
+    </a>
+    <nav class="main-nav terms-nav">
+      <a href="index.html#credito">Crédito Vale</a>
+      <a href="index.html#apoie" class="nav-cta">Voltar à adesão</a>
+    </nav>
+  </header>
+  <main class="terms-main">
+    <div class="container">
+      <div class="terms-alert">
+        <strong>Regra essencial antes da adesão</strong>
+        <span>100% do apoio vira saldo nominal de Crédito Vale.</span>
+        <b>O percentual de utilização varia conforme o produto ou serviço.</b>
+      </div>
+      <article class="terms-document">
+        <h1>TERMO DE ADESÃO AO PROGRAMA APOIADOR FUNDADOR — CRÉDITO VALE</h1>
 <p><strong>Versão 1.0 — Agosto de 2026</strong></p>
 <p>Este Termo estabelece as condições para participação no <strong>Programa Apoiador Fundador — Crédito Vale</strong>, vinculado ao projeto <strong>Engenharia da Produção Musical™</strong>, Instituto Musical Vale, Vale Produções e demais produtos e serviços expressamente participantes do Programa.</p>
 <p>Ao selecionar a opção <strong>“Li e aceito o Termo do Programa Apoiador Fundador”</strong> e concluir sua contribuição, o participante declara ter lido, compreendido e aceitado integralmente as condições abaixo.</p>
-<hr/>
+<hr />
 <h2>1. IDENTIFICAÇÃO DO RESPONSÁVEL PELO PROGRAMA</h2>
 <p><strong>Responsável contratual:</strong> Instituto Musical Vale
 <strong>CNPJ/CPF:</strong> 31.255.200/0001-19
@@ -261,7 +43,7 @@
 <strong>WhatsApp:</strong> (11) 96827-2371
 <strong>E-mail:</strong> <a href="mailto:empengenhariadaproducaomusical@gmail.com">empengenhariadaproducaomusical@gmail.com</a></p>
 <p>Para fins deste Termo, o responsável acima será denominado <strong>EMISSOR</strong>, e a pessoa que aderir ao Programa será denominada <strong>APOIADOR</strong>.</p>
-<hr/>
+<hr />
 <h1>2. OBJETO DO PROGRAMA</h1>
 <p>2.1. O Programa Apoiador Fundador foi criado para permitir que pessoas que acreditam no desenvolvimento da <strong>Engenharia da Produção Musical™</strong> contribuam voluntariamente com recursos para sua implantação, produção de conteúdos, estrutura tecnológica, desenvolvimento educacional e demais atividades relacionadas ao projeto.</p>
 <p>2.2. A participação não exige mensalidade ou contribuição recorrente.</p>
@@ -275,7 +57,7 @@
 <li>apoio de R$ 500,00 = R$ 500,00 de Crédito Vale.</li>
 </ul>
 <p>2.5. O APOIADOR também terá direito a um <strong>Certificado Digital de Apoiador Fundador</strong>, independentemente do valor da contribuição.</p>
-<hr/>
+<hr />
 <h1>3. NATUREZA DA PARTICIPAÇÃO</h1>
 <p>3.1. A participação no Programa <strong>não constitui investimento financeiro</strong>.</p>
 <p>3.2. O APOIADOR não adquire:</p>
@@ -293,14 +75,14 @@
 <p>3.4. Não existe promessa de valorização do valor contribuído.</p>
 <p>3.5. O benefício econômico do APOIADOR consiste exclusivamente no <strong>Crédito Vale e nos demais benefícios expressamente descritos neste Termo</strong>.</p>
 <p>3.6. O Certificado de Apoiador Fundador possui caráter institucional e comemorativo e não constitui diploma, certificado acadêmico, formação profissional, título oficial ou habilitação profissional.</p>
-<hr/>
+<hr />
 <h1>4. REGRA FUNDAMENTAL DO CRÉDITO VALE</h1>
 <p><strong>ATENÇÃO: ESTA É UMA CONDIÇÃO ESSENCIAL DO PROGRAMA.</strong></p>
 <p>4.1. O APOIADOR recebe saldo nominal de Crédito Vale equivalente a 100% do valor apoiado.</p>
 <p>4.2. Entretanto, isso <strong>não significa que o Crédito Vale poderá pagar 100% do preço de todos os produtos ou serviços</strong>.</p>
 <p>4.3. Cada categoria possui limites próprios de utilização, principalmente quando existem custos externos de impressão, estúdio, deslocamento, terceiros, plataformas ou outros custos que não podem ser eliminados.</p>
 <p>4.4. O APOIADOR declara estar ciente dessas limitações antes de concluir sua participação.</p>
-<hr/>
+<hr />
 <h1>5. FUNCIONAMENTO DO SALDO</h1>
 <p>5.1. Para fins de utilização, cada <strong>R$ 1,00 de Crédito Vale corresponde nominalmente a R$ 1,00 de saldo</strong>, respeitados os limites de utilização de cada categoria.</p>
 <p>5.2. O saldo poderá ser utilizado em uma única aquisição ou gradualmente em diversas aquisições.</p>
@@ -314,7 +96,7 @@
 <p>e) não possui correção monetária;</p>
 <p>f) não pode ser convertido em dinheiro, ressalvados direitos obrigatórios previstos em lei;</p>
 <p>g) somente poderá ser utilizado nos produtos e serviços elegíveis.</p>
-<hr/>
+<hr />
 <h1>6. E-BOOKS E LIVROS DIGITAIS</h1>
 <p>6.1. O Crédito Vale poderá ser livremente utilizado na aquisição dos <strong>e-books elegíveis de Jonatan Vale e demais livros digitais participantes do Programa</strong>, até o limite do saldo disponível.</p>
 <p>6.2. Em e-books elegíveis, o crédito poderá representar <strong>até 100% do valor da compra</strong>.</p>
@@ -329,7 +111,7 @@ Saldo restante: R$ 20,00.</p>
 <p>b) oferecer outro e-book elegível;</p>
 <p>c) manter integralmente o saldo para utilização posterior.</p>
 <p>6.5. A aquisição de e-book não transfere direitos autorais ao APOIADOR e não autoriza reprodução, compartilhamento, revenda ou disponibilização pública não autorizada.</p>
-<hr/>
+<hr />
 <h1>7. LIVROS IMPRESSOS</h1>
 <p>7.1. Livros físicos possuem custos obrigatórios de impressão, produção, acabamento e eventualmente embalagem e transporte.</p>
 <p>7.2. Por esse motivo, o Crédito Vale <strong>não poderá quitar integralmente livros impressos</strong>.</p>
@@ -347,7 +129,7 @@ Valor mínimo restante da compra: R$ 49,00, além de eventual frete.</p>
 <p>7.5. A existência de R$ 100,00 ou mais de saldo não altera o limite máximo de R$ 20,00 por exemplar.</p>
 <p>7.6. Caso sejam adquiridos vários livros físicos diferentes ou múltiplos exemplares elegíveis, o limite poderá ser aplicado individualmente a cada exemplar, observadas eventuais regras promocionais divulgadas na oferta.</p>
 <p>7.7. Frete, postagem, transportadora, embalagem especial e demais custos logísticos não são pagos com Crédito Vale, salvo divulgação expressa em contrário.</p>
-<hr/>
+<hr />
 <h1>8. PRODUÇÃO MUSICAL — VALE PRODUÇÕES</h1>
 <p>8.1. O Crédito Vale poderá ser utilizado como abatimento em serviços elegíveis de produção musical realizados pela Vale Produções.</p>
 <p>8.2. Cada música deverá ser previamente orçada conforme suas características, necessidades técnicas e escopo contratado.</p>
@@ -365,7 +147,7 @@ Saldo restante de Crédito Vale: R$ 50,00.</p>
 <p>8.6. Horas adicionais de estúdio, músicos contratados, instrumentistas, locação de equipamentos especiais, deslocamento, licenciamento, distribuição, serviços de terceiros e outras despesas extraordinárias poderão ser cobrados separadamente.</p>
 <p>8.7. Antes da contratação será apresentado orçamento ou descrição do serviço.</p>
 <p>8.8. A utilização do crédito não garante sucesso comercial, número de reproduções, contratos artísticos, alcance, monetização ou qualquer resultado artístico ou financeiro da música produzida.</p>
-<hr/>
+<hr />
 <h1>9. AULAS — INSTITUTO MUSICAL VALE</h1>
 <p>9.1. O Crédito Vale poderá ser utilizado no pagamento de aulas elegíveis oferecidas pelo Instituto Musical Vale.</p>
 <p>9.2. Nesta categoria, o Crédito Vale poderá cobrir <strong>até 100% do valor da mensalidade ou aula elegível</strong>, limitado ao saldo disponível.</p>
@@ -381,12 +163,12 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>d) calendário vigente;</p>
 <p>e) regras acadêmicas e operacionais do Instituto.</p>
 <p>9.5. A utilização do Crédito Vale não assegura horário específico, professor específico ou disponibilidade imediata.</p>
-<hr/>
+<hr />
 <h1>10. AULAS DENTRO DA CIDADE DE SÃO PAULO</h1>
 <p>10.1. Para aulas presenciais elegíveis realizadas <strong>dentro do Município de São Paulo</strong>, não será cobrada taxa ordinária adicional de deslocamento do professor.</p>
 <p>10.2. Permanecem possíveis custos extraordinários diretamente relacionados ao local escolhido pelo aluno, tais como estacionamento privativo obrigatório, locação de espaço, ingresso, equipamentos específicos ou outras exigências do local.</p>
 <p>10.3. Qualquer custo extraordinário deverá ser informado previamente.</p>
-<hr/>
+<hr />
 <h1>11. AULAS FORA DO MUNICÍPIO DE SÃO PAULO</h1>
 <p>11.1. Aulas presenciais fora do Município de São Paulo dependerão de avaliação e disponibilidade.</p>
 <p>11.2. Poderão ser acrescidos custos relacionados a:</p>
@@ -401,24 +183,24 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>11.3. Esses valores deverão ser apresentados previamente ao APOIADOR.</p>
 <p>11.4. Salvo autorização expressa, despesas de deslocamento e despesas externas não poderão ser quitadas com Crédito Vale.</p>
 <p>11.5. O APOIADOR poderá optar por modalidade online, quando disponível, para evitar esses custos.</p>
-<hr/>
+<hr />
 <h1>12. CURSOS E PRODUTOS DA ENGENHARIA DA PRODUÇÃO MUSICAL™</h1>
 <p>12.1. O Crédito Vale poderá ser utilizado em cursos, materiais, eventos e produtos elegíveis da Engenharia da Produção Musical™.</p>
 <p>12.2. O percentual máximo de utilização será informado no momento da oferta de cada produto.</p>
 <p>12.3. Quando expressamente indicado, determinado curso ou produto digital poderá ser adquirido com até 100% de Crédito Vale.</p>
 <p>12.4. Taxas de plataformas externas poderão gerar limitações próprias, que serão informadas quando aplicáveis.</p>
-<hr/>
+<hr />
 <h1>13. PREÇOS</h1>
 <p>13.1. O Crédito Vale representa saldo em reais, mas <strong>não congela o preço dos produtos e serviços</strong>.</p>
 <p>13.2. Será considerado o preço vigente na data em que o crédito for utilizado.</p>
 <p>13.3. Exemplo:</p>
 <p>Se um produto custa R$ 100,00 hoje e posteriormente passa a custar R$ 120,00, o APOIADOR continuará possuindo o mesmo saldo de Crédito Vale, e não direito adquirido ao preço anterior.</p>
 <p>13.4. Promoções especiais poderão oferecer condições mais favoráveis.</p>
-<hr/>
+<hr />
 <h1>14. ACÚMULO COM OUTRAS PROMOÇÕES</h1>
 <p>14.1. A utilização conjunta do Crédito Vale com cupons, promoções, bolsas, descontos ou outros benefícios dependerá das regras específicas de cada campanha.</p>
 <p>14.2. Na ausência de autorização expressa, descontos promocionais e Crédito Vale não serão automaticamente cumulativos.</p>
-<hr/>
+<hr />
 <h1>15. TRANSFERÊNCIA DO CRÉDITO</h1>
 <p>15.1. O APOIADOR poderá solicitar <strong>uma única transferência integral do saldo remanescente</strong> para outra pessoa.</p>
 <p>15.2. A transferência deverá ser solicitada pelo titular original através de canal oficial.</p>
@@ -426,20 +208,20 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>15.4. Após concluída a transferência, o titular original não poderá solicitar devolução do saldo transferido.</p>
 <p>15.5. O novo beneficiário estará sujeito às mesmas condições deste Termo.</p>
 <p>15.6. A transferência do Crédito Vale não transfere o Certificado de Apoiador Fundador, que continuará vinculado à pessoa que realizou originalmente a contribuição.</p>
-<hr/>
+<hr />
 <h1>16. CERTIFICADO DE APOIADOR FUNDADOR</h1>
 <p>16.1. Após a confirmação do pagamento, o APOIADOR poderá receber certificado digital contendo seu nome.</p>
 <p>16.2. O valor da contribuição não precisa constar no certificado.</p>
 <p>16.3. O certificado reconhece a participação histórica do APOIADOR na fase fundadora da Engenharia da Produção Musical™.</p>
 <p>16.4. O certificado não representa investimento societário, título financeiro ou formação acadêmica.</p>
-<hr/>
+<hr />
 <h1>17. VALIDADE DO CRÉDITO</h1>
 <p>17.1. O Crédito Vale terá validade inicial de <strong>24 meses contados da confirmação do pagamento</strong>.</p>
 <p>17.2. Antes do encerramento do prazo, o APOIADOR poderá solicitar <strong>uma prorrogação gratuita adicional de 12 meses</strong>, desde que a solicitação seja realizada enquanto o saldo ainda estiver válido.</p>
 <p>17.3. A prorrogação não será automática.</p>
 <p>17.4. O EMISSOR poderá oferecer prazo maior em campanhas específicas.</p>
 <p>17.5. Nenhuma disposição desta cláusula afasta direitos que sejam obrigatoriamente assegurados pela legislação aplicável.</p>
-<hr/>
+<hr />
 <h1>18. CONFIRMAÇÃO E ESTORNO DO PAGAMENTO</h1>
 <p>18.1. O Crédito Vale somente será definitivamente liberado após confirmação do pagamento.</p>
 <p>18.2. Pagamentos:</p>
@@ -450,7 +232,7 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>e) devolvidos pela instituição financeira</p>
 <p>poderão resultar no cancelamento proporcional do Crédito Vale correspondente.</p>
 <p>18.3. Caso o Crédito Vale já tenha sido utilizado antes de um posterior estorno ou chargeback sem fundamento legítimo, o EMISSOR poderá cobrar os produtos ou serviços utilizados, observada a legislação aplicável.</p>
-<hr/>
+<hr />
 <h1>19. DIREITO DE ARREPENDIMENTO</h1>
 <p>19.1. Nas hipóteses em que se aplicar a legislação de proteção ao consumidor relativa à contratação fora do estabelecimento comercial, o APOIADOR poderá exercer o direito de arrependimento dentro do prazo legal.</p>
 <p>19.2. Para adesões realizadas integralmente pela internet, será disponibilizado prazo de <strong>7 dias</strong>, contado da adesão eletrônica, sem prejuízo de prazo mais favorável que seja obrigatório no caso concreto.</p>
@@ -460,12 +242,12 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>19.4. O EMISSOR confirmará o recebimento da solicitação pelo mesmo meio ou outro meio eletrônico adequado.</p>
 <p>19.5. O reembolso seguirá as regras legalmente aplicáveis e o meio de pagamento utilizado.</p>
 <p>19.6. O exercício de direitos obrigatórios previstos em lei não poderá ser excluído por este Termo.</p>
-<hr/>
+<hr />
 <h1>20. CANCELAMENTO APÓS O PRAZO LEGAL</h1>
 <p>20.1. Após eventual prazo obrigatório de arrependimento, a contribuição não poderá ser simplesmente sacada ou convertida em dinheiro por vontade do APOIADOR.</p>
 <p>20.2. O saldo permanecerá disponível para utilização dentro das regras do Programa.</p>
 <p>20.3. Permanecem ressalvadas hipóteses de restituição previstas obrigatoriamente em lei.</p>
-<hr/>
+<hr />
 <h1>21. AGENDAMENTOS E FALTAS</h1>
 <p>21.1. A contratação de aulas, estúdio, produção musical ou qualquer serviço sujeito a agenda poderá possuir política específica de:</p>
 <p>a) agendamento;</p>
@@ -475,7 +257,7 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>e) ausência.</p>
 <p>21.2. Essas regras deverão ser informadas antes da confirmação da reserva.</p>
 <p>21.3. A simples existência de Crédito Vale não afasta as políticas previamente informadas para o serviço contratado.</p>
-<hr/>
+<hr />
 <h1>22. DISPONIBILIDADE DOS PRODUTOS E SERVIÇOS</h1>
 <p>22.1. A existência de Crédito Vale não garante estoque permanente de um livro, vaga imediata em determinado horário, disponibilidade de professor específico, estúdio específico ou permanência indefinida de determinado produto.</p>
 <p>22.2. Em caso de indisponibilidade temporária, o APOIADOR poderá:</p>
@@ -483,18 +265,18 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>b) escolher outro produto ou serviço elegível;</p>
 <p>c) manter o saldo para utilização posterior.</p>
 <p>22.3. O saldo não será considerado automaticamente consumido apenas porque determinado produto deixou de estar disponível.</p>
-<hr/>
+<hr />
 <h1>23. ALTERAÇÃO DO CATÁLOGO</h1>
 <p>23.1. Novos livros, cursos, serviços e produtos poderão ser adicionados ao Programa.</p>
 <p>23.2. Produtos ou serviços poderão deixar de participar do Programa por motivos comerciais, técnicos, operacionais ou legais.</p>
 <p>23.3. A retirada de determinado produto não elimina o saldo de Crédito Vale já existente.</p>
-<hr/>
+<hr />
 <h1>24. ALTERAÇÕES DESTE TERMO</h1>
 <p>24.1. Cada adesão ficará vinculada à versão do Termo aceita no momento da contribuição.</p>
 <p>24.2. Alterações futuras <strong>não poderão reduzir retroativamente o saldo nominal já adquirido ou retirar direitos já definitivamente incorporados pelo APOIADOR</strong>, salvo quando necessárias para cumprimento obrigatório de lei ou decisão de autoridade competente.</p>
 <p>24.3. Novas contribuições poderão estar sujeitas à versão mais recente do Termo.</p>
 <p>24.4. Alterações mais favoráveis ao APOIADOR poderão ser aplicadas aos saldos anteriores.</p>
-<hr/>
+<hr />
 <h1>25. DADOS PESSOAIS</h1>
 <p>25.1. Para administrar o Programa poderão ser tratados dados como:</p>
 <p>a) nome;</p>
@@ -512,14 +294,14 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>25.5. O APOIADOR poderá exercer seus direitos relativos aos dados pessoais através do e-mail:</p>
 <p><a href="mailto:empengenhariadaproducaomusical@gmail.com"><strong>empengenhariadaproducaomusical@gmail.com</strong></a></p>
 <p>25.6. Serão adotadas medidas razoáveis de segurança para proteção dos dados e registros do Programa.</p>
-<hr/>
+<hr />
 <h1>26. COMUNICAÇÕES</h1>
 <p>26.1. Serão considerados canais oficiais:</p>
 <p><strong>WhatsApp:</strong> (11) 96827-2371
 <strong>E-mail:</strong> <a href="mailto:empengenhariadaproducaomusical@gmail.com">empengenhariadaproducaomusical@gmail.com</a></p>
 <p>26.2. O APOIADOR deverá manter seus dados de contato atualizados.</p>
 <p>26.3. Comunicações relacionadas a saldo, segurança, transações, alteração obrigatória de condições e execução do Programa não serão consideradas publicidade promocional.</p>
-<hr/>
+<hr />
 <h1>27. ATENDIMENTO</h1>
 <p>27.1. O APOIADOR poderá utilizar os canais oficiais para:</p>
 <p>a) consultar saldo;</p>
@@ -530,15 +312,15 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>f) solicitar esclarecimentos;</p>
 <p>g) apresentar reclamação.</p>
 <p>27.2. O recebimento das solicitações eletrônicas será confirmado e tratado dentro do prazo legal aplicável.</p>
-<hr/>
+<hr />
 <h1>28. MAIORIDADE E CAPACIDADE</h1>
 <p>28.1. A adesão deverá ser realizada por pessoa civilmente capaz.</p>
 <p>28.2. Menores ou pessoas que dependam legalmente de representação deverão aderir através de seu responsável legal.</p>
-<hr/>
+<hr />
 <h1>29. EVENTOS FORA DO CONTROLE DAS PARTES</h1>
 <p>29.1. Falhas temporárias de plataforma, indisponibilidade de estúdio, doença de professor, problemas de energia, internet, serviços de terceiros ou outros eventos fora do controle razoável poderão resultar em reagendamento ou alteração operacional.</p>
 <p>29.2. Nessas situações, o Crédito Vale não utilizado continuará preservado.</p>
-<hr/>
+<hr />
 <h1>30. AUSÊNCIA DE GARANTIAS DE RESULTADO</h1>
 <p>30.1. O Programa não oferece garantia de:</p>
 <p>a) emprego;</p>
@@ -551,28 +333,28 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>h) crescimento em redes sociais;</p>
 <p>i) qualquer outro resultado econômico ou profissional.</p>
 <p>30.2. A contrapartida consiste nos direitos expressamente estabelecidos neste Termo.</p>
-<hr/>
+<hr />
 <h1>31. BOA-FÉ E USO ADEQUADO</h1>
 <p>31.1. As partes comprometem-se a atuar de boa-fé.</p>
 <p>31.2. Poderão ser investigadas utilizações fraudulentas, manipulações de saldo, chargebacks abusivos, falsidade de identidade ou tentativas de utilização duplicada.</p>
 <p>31.3. Medidas de bloqueio preventivo deverão ser proporcionais e durar apenas o tempo necessário para esclarecimento da situação.</p>
-<hr/>
+<hr />
 <h1>32. RESPONSABILIDADE</h1>
 <p>32.1. Nenhuma cláusula deste Termo deverá ser interpretada como exclusão de responsabilidade que a legislação determine como obrigatória.</p>
 <p>32.2. O EMISSOR responderá pelas obrigações que efetivamente assumir neste Termo e nas ofertas específicas realizadas ao APOIADOR.</p>
 <p>32.3. Serviços prestados por terceiros poderão estar sujeitos também às condições legítimas do respectivo prestador, desde que previamente informadas.</p>
-<hr/>
+<hr />
 <h1>33. INTERPRETAÇÃO E NULIDADE PARCIAL</h1>
 <p>33.1. Caso alguma cláusula venha a ser considerada inválida ou inaplicável, as demais permanecerão válidas na medida juridicamente possível.</p>
 <p>33.2. Nenhuma cláusula deste Termo deverá ser utilizada para afastar direito indisponível do consumidor.</p>
 <p>33.3. Em caso de dúvida ou conflito de interpretação em relação de consumo, serão observadas as normas legalmente aplicáveis aos contratos de adesão e proteção do consumidor.</p>
-<hr/>
+<hr />
 <h1>34. SOLUÇÃO DE DIVERGÊNCIAS</h1>
 <p>34.1. Antes da adoção de medidas judiciais, as partes procurarão solucionar amigavelmente eventual divergência através dos canais oficiais.</p>
 <p>34.2. Esta tentativa não impede o exercício imediato de direitos quando necessário.</p>
 <p>34.3. Nas relações sujeitas à legislação de consumo, permanecerá assegurado ao consumidor o foro e demais garantias que a lei lhe conferir.</p>
 <p>34.4. Fora de relações de consumo, eventual eleição de foro deverá observar os requisitos legais de conexão e validade vigentes na data da contratação.</p>
-<hr/>
+<hr />
 <h1>35. ACEITE ELETRÔNICO</h1>
 <p>35.1. O aceite poderá ocorrer eletronicamente através do site.</p>
 <p>35.2. Para fins de comprovação poderão ser mantidos registros como:</p>
@@ -586,7 +368,7 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p>h) registro do checkbox de aceite.</p>
 <p>35.3. Uma cópia deste Termo deverá permanecer disponível ao APOIADOR para consulta.</p>
 <p>35.4. O aceite eletrônico terá a mesma finalidade de manifestação expressa de concordância com estas condições.</p>
-<hr/>
+<hr />
 <h1>36. DECLARAÇÕES EXPRESSAS DO APOIADOR</h1>
 <p>Ao concluir a adesão, o APOIADOR declara especificamente que compreendeu que:</p>
 <p><strong>I — não está adquirindo participação financeira ou societária no projeto;</strong></p>
@@ -601,7 +383,7 @@ Valor monetário da mensalidade: R$ 0,00.</p>
 <p><strong>X — preços futuros poderão mudar e o crédito não congela preços;</strong></p>
 <p><strong>XI — o Crédito Vale não é sacável e não rende juros;</strong></p>
 <p><strong>XII — permanecem preservados os direitos obrigatórios previstos na legislação brasileira.</strong></p>
-<hr/>
+<hr />
 <h1>37. QUADRO-RESUMO DO CRÉDITO VALE</h1>
 <p><strong>E-books elegíveis</strong>
 Até <strong>100% do preço</strong>, limitado ao saldo e às possibilidades técnicas da plataforma.</p>
@@ -617,7 +399,7 @@ Sem taxa ordinária adicional de deslocamento, observadas despesas extraordinár
 Sujeitas à avaliação e possíveis custos adicionais de deslocamento e logística.</p>
 <p><strong>Cursos/produtos da Engenharia da Produção Musical™</strong>
 Percentual conforme oferta, podendo chegar a <strong>100% em produtos digitais elegíveis</strong>.</p>
-<hr/>
+<hr />
 <h1>38. ACEITE</h1>
 <p>Declaro que:</p>
 <ul>
@@ -630,7 +412,7 @@ Percentual conforme oferta, podendo chegar a <strong>100% em produtos digitais e
 <p><strong>[ ] LI E ACEITO O TERMO DE ADESÃO AO PROGRAMA APOIADOR FUNDADOR — CRÉDITO VALE.</strong></p>
 <p><strong>[ ] Desejo receber novidades, lançamentos e comunicações promocionais.</strong>
 <em>Opcional e independente do aceite do contrato.</em></p>
-<hr/>
+<hr />
 <p><strong>Jonatan Vale</strong>
 Engenharia da Produção Musical™
 Instituto Musical Vale • Vale Produções</p>
@@ -638,86 +420,12 @@ Instituto Musical Vale • Vale Produções</p>
 <strong>E-mail:</strong> <a href="mailto:empengenhariadaproducaomusical@gmail.com">empengenhariadaproducaomusical@gmail.com</a></p>
 <p><strong>Versão do Termo:</strong> 1.0
 <strong>Data:</strong> agosto de 2026</p>
-</div>
-</div>
-<div class="term-read-status" id="termReadStatus">Role o documento até o final para continuar.</div>
-</div>
-<div hidden="" id="businessTermsStep">
-<div class="business-notice">
-<strong>Manifestação de interesse empresarial</strong>
-<p>Para patrocinadores empresariais e parceiros técnicos, este cadastro não celebra automaticamente contrato, não transfere direitos e não cria obrigação de pagamento. A formalização depende de proposta/contrato próprio e confirmação das condições específicas.</p>
-</div>
-</div>
-<div class="wizard-actions">
-<button class="btn btn-outline wizard-back" data-back-step="1" type="button">← Voltar</button>
-<button class="btn btn-gold" disabled="" id="termContinue" type="button">Continuar para adesão <i>→</i></button>
-</div>
-</section>
-<section aria-labelledby="wizardTitle3" class="wizard-screen" data-wizard-step="3" hidden="">
-<div class="wizard-head"><span>ETAPA 3 DE 3</span><h3 id="wizardTitle3">Agora escolha o valor e registre seus dados</h3><p>Somente depois do resumo e do Termo aparecem valor, pagamento e o aceite obrigatório.</p></div>
-<div class="final-reminder" id="friendFinalReminder">
-<strong>100% do apoio vira Crédito Vale</strong>
-<span>O percentual de utilização varia conforme o produto ou serviço. Livros impressos: até R$ 20 por exemplar. Produção musical: mínimo de R$ 150 em pagamento monetário por música após o crédito.</span>
-</div>
-<div id="friendAmountChoices">
-<div class="amount-panel wizard-amount-panel">
-<div class="amount-panel-head"><span>Escolha uma sugestão de apoio</span><small>Ou informe outro valor abaixo.</small></div>
-<div class="amount-grid" id="amountGrid">
-<button data-amount="10" type="button">R$ 10</button><button data-amount="15" type="button">R$ 15</button><button data-amount="20" type="button">R$ 20</button><button class="featured" data-amount="25" type="button">R$ 25 <small>popular</small></button>
-<button data-amount="30" type="button">R$ 30</button><button data-amount="35" type="button">R$ 35</button><button data-amount="40" type="button">R$ 40</button><button data-amount="45" type="button">R$ 45</button>
-<button class="featured" data-amount="50" type="button">R$ 50 <small>popular</small></button><button data-amount="60" type="button">R$ 60</button><button data-amount="70" type="button">R$ 70</button><button data-amount="80" type="button">R$ 80</button>
-<button data-amount="90" type="button">R$ 90</button><button class="featured" data-amount="100" type="button">R$ 100 <small>destaque</small></button><button data-amount="150" type="button">R$ 150</button><button class="featured" data-amount="200" type="button">R$ 200 <small>destaque</small></button>
-</div>
-<button class="other-amount" data-other-amount="" type="button">Quero informar outro valor →</button>
-</div>
-</div>
-<div class="form-step-head"><span>A</span><div><strong>Identificação e contato</strong><small>Dados necessários para administrar sua adesão ou manifestação de interesse.</small></div></div>
-<div class="form-grid two">
-<label class="field"><span>Nome completo *</span><input autocomplete="name" maxlength="120" name="full_name" placeholder="Seu nome" required=""/></label>
-<label class="field"><span>E-mail *</span><input autocomplete="email" maxlength="160" name="email" placeholder="voce@email.com" required="" type="email"/></label>
-<label class="field"><span>WhatsApp *</span><input autocomplete="tel" inputmode="tel" maxlength="24" name="whatsapp" placeholder="(11) 99999-9999" required=""/></label>
-<label class="field"><span>Cidade / Estado *</span><input maxlength="100" name="city_state" placeholder="São Paulo / SP" required=""/></label>
-<label class="field"><span>Perfil *</span><select id="profileType" name="profile_type" required=""><option value="">Selecione</option><option>Pessoa física</option><option>Empresa / marca</option><option>Profissional / prestador</option><option>Instituição</option><option>Outro</option></select></label>
-<label class="field"><span>Empresa / organização</span><input maxlength="140" name="organization_name" placeholder="Opcional"/></label>
-</div>
-<div class="form-step-head"><span>B</span><div><strong>Valor e pagamento</strong><small>Agora essas opções estão disponíveis.</small></div></div>
-<div class="form-grid two">
-<label class="field"><span>Valor pretendido (R$) *</span><input id="intendedAmount" inputmode="decimal" min="10" name="intended_amount" placeholder="Ex.: 50" required="" step="0.01" type="number"/></label>
-<label class="field"><span>Forma preferida *</span><select name="payment_preference" required=""><option value="">Selecione</option><option>PIX</option><option>Cartão de crédito</option><option>Boleto</option><option>Transferência</option><option>A combinar</option><option>Serviços / equipamentos</option></select></label>
-<label class="field"><span>Como conheceu a EPM?</span><select name="source"><option value="">Selecione</option><option>Amigo / conhecido</option><option>Aluno / ex-aluno</option><option>Indicação</option><option>Redes sociais</option><option>Instituto Musical Vale</option><option>Vale Produções</option><option>Outro</option></select></label>
-<label class="field"><span>Melhor período para contato</span><select name="best_contact_period"><option value="">Selecione</option><option>Manhã</option><option>Tarde</option><option>Noite</option><option>Qualquer horário</option></select></label>
-</div>
-<label class="field"><span>Observação / motivação</span><textarea maxlength="1000" name="motivation" placeholder="Se desejar, deixe uma observação para a equipe." rows="4"></textarea></label>
-<div class="form-step-head"><span>C</span><div><strong>Aceite obrigatório</strong><small>O aceite fica separado das comunicações promocionais.</small></div></div>
-<label class="check-row mandatory-check"><input id="termsAccepted" name="terms_accepted" required="" type="checkbox"/><span id="termsAcceptedLabel"><strong>Li e aceito o Termo de Adesão ao Programa Apoiador Fundador — Crédito Vale</strong> e confirmo que compreendi o quadro-resumo, inclusive que 100% do apoio gera saldo nominal, mas o percentual de utilização varia conforme o produto ou serviço. *</span></label>
-<label class="check-row"><input name="allow_name_public" type="checkbox" value="true"/><span>Autorizo que meu nome seja citado futuramente em uma lista pública de Apoiadores Fundadores. <small>(Opcional.)</small></span></label>
-<label class="check-row"><input name="marketing_opt_in" type="checkbox"/><span>Desejo receber novidades, lançamentos e comunicações promocionais. <small>(Opcional e independente do aceite do contrato.)</small></span></label>
-<div class="legal-note"><strong>Responsável:</strong> Instituto Musical Vale • CNPJ 31.255.200/0001-19 • Responsável: Jonatan Vale • WhatsApp (11) 96827-2371 • empengenhariadaproducaomusical@gmail.com</div>
-<div class="wizard-actions final-actions">
-<button class="btn btn-outline wizard-back" data-back-step="2" type="button">← Voltar ao Termo</button>
-<button class="btn btn-gold btn-submit" id="submitBtn" type="submit"><span>Registrar minha adesão</span><i aria-hidden="true">→</i></button>
-</div>
-<p aria-live="polite" class="form-status" id="formStatus" role="status"></p>
-</section>
-</form>
-</div>
-</section>
-<section class="section closing-section">
-<div class="container closing-card reveal">
-<div><span class="eyebrow">ENGENHARIA DA PRODUÇÃO MUSICAL™</span><h2>Uma formação grande pode começar com muitos apoios pequenos.</h2><p>Obrigado por considerar fazer parte da primeira fase desta construção.</p></div>
-<a class="btn btn-gold" href="#apoie">Iniciar adesão</a>
-</div>
-</section>
-</main>
-<footer>
-<div class="container footer-grid">
-<div class="footer-brand"><picture><source srcset="assets/logo-epm.webp" type="image/webp"/><img alt="EPM" src="assets/logo-epm.png"/></picture><div><strong>Engenharia da Produção Musical™</strong><span>Instituto Musical Vale • Vale Produções</span></div></div>
-<div class="footer-links"><a href="#meta">Meta Fundadora</a><a href="#credito">Crédito Vale</a><a href="#apoie">Participar</a><a href="termo.html">Termo de Adesão</a><a href="admin.html">Área administrativa</a></div>
-<p class="footer-note">Programa Apoiador Fundador — Crédito Vale. Instituto Musical Vale • CNPJ 31.255.200/0001-19. Não constitui produto de investimento financeiro.</p>
-</div>
-</footer>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="config.js"></script>
-<script src="app.js"></script>
+
+      </article>
+      <div class="terms-bottom-action">
+        <a class="btn btn-gold" href="index.html#apoie">Voltar para a adesão</a>
+      </div>
+    </div>
+  </main>
 </body>
 </html>

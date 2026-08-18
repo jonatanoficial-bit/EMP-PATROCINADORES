@@ -1,0 +1,15 @@
+EPM PATROCINADORES — V2.2 ADESÃO CLARA
+
+Alterações principais:
+- fluxo de adesão em 3 telas;
+- quadro-resumo antes do valor;
+- aviso destacado: "o percentual de utilização varia conforme o produto ou serviço";
+- Termo completo Versão 1.0 — agosto/2026 integrado ao site e disponível em termo.html;
+- valores e forma de pagamento só aparecem na terceira etapa;
+- checkbox obrigatório de aceite;
+- marketing opcional separado;
+- Instituto Musical Vale — CNPJ 31.255.200/0001-19;
+- banco preparado para registrar terms_accepted, terms_version e marketing_opt_in;
+- admin mostra/exporta a versão aceita.
+
+Para atualizar o banco existente, use supabase-update-v2.2.sql.

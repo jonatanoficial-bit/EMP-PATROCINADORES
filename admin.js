@@ -188,6 +188,7 @@
         ${detailBox('E-mail', l.email)}${detailBox('WhatsApp', l.whatsapp)}${detailBox('Cidade / Estado', l.city_state)}${detailBox('Perfil', l.profile_type)}
         ${detailBox('Empresa / organização', l.organization_name)}${detailBox('Programa', l.support_program)}${detailBox('Como conheceu', l.source)}${detailBox('Forma preferida', l.payment_preference)}
         ${detailBox('Valor pretendido', money(l.intended_amount))}${detailBox('Melhor contato', l.best_contact_period)}${detailBox('Nome público autorizado?', l.allow_name_public ? 'Sim' : 'Não')}${detailBox('Observação / motivação', l.motivation)}
+        ${detailBox('Termo/manifestação aceita?', l.terms_accepted ? 'Sim' : 'Não')}${detailBox('Versão aceita', l.terms_version || l.consent_version)}${detailBox('Marketing opcional?', l.marketing_opt_in ? 'Sim' : 'Não')}
       </div>
       <div class="admin-edit">
         <h3>Controle administrativo</h3>
@@ -285,9 +286,9 @@
 
   function exportCsv() {
     const rows = filteredLeads();
-    const headers = ['Data cadastro','Nome','Email','WhatsApp','Cidade/Estado','Perfil','Empresa/Organização','Programa','Origem','Valor pretendido','Preferência de pagamento','Motivação','Melhor contato','Autorização nome público','Status','Valor confirmado','Valor recebido','Data recebimento','Forma recebida','Crédito gerado','Crédito utilizado','Crédito disponível','Certificado','Código certificado','Notas internas'];
+    const headers = ['Data cadastro','Nome','Email','WhatsApp','Cidade/Estado','Perfil','Empresa/Organização','Programa','Origem','Valor pretendido','Preferência de pagamento','Motivação','Melhor contato','Autorização nome público','Termo/manifestação aceita','Versão aceita','Marketing opcional','Status','Valor confirmado','Valor recebido','Data recebimento','Forma recebida','Crédito gerado','Crédito utilizado','Crédito disponível','Certificado','Código certificado','Notas internas'];
     const data = rows.map(l => [
-      dateBR(l.created_at), l.full_name, l.email, l.whatsapp, l.city_state, l.profile_type, l.organization_name, l.support_program, l.source, l.intended_amount, l.payment_preference, l.motivation, l.best_contact_period, l.allow_name_public ? 'Sim' : 'Não', statusLabel(l.admin_status), l.confirmed_amount, l.received_amount, dateBR(l.received_at), l.payment_method_confirmed, Number(l.received_amount) || 0, l.credit_used || 0, creditBalance(l), l.certificate_status, l.certificate_code, l.admin_notes
+      dateBR(l.created_at), l.full_name, l.email, l.whatsapp, l.city_state, l.profile_type, l.organization_name, l.support_program, l.source, l.intended_amount, l.payment_preference, l.motivation, l.best_contact_period, l.allow_name_public ? 'Sim' : 'Não', l.terms_accepted ? 'Sim' : 'Não', l.terms_version || l.consent_version, l.marketing_opt_in ? 'Sim' : 'Não', statusLabel(l.admin_status), l.confirmed_amount, l.received_amount, dateBR(l.received_at), l.payment_method_confirmed, Number(l.received_amount) || 0, l.credit_used || 0, creditBalance(l), l.certificate_status, l.certificate_code, l.admin_notes
     ]);
     const csv = '\uFEFF' + [headers, ...data].map(r => r.map(csvEscape).join(';')).join('\r\n');
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });

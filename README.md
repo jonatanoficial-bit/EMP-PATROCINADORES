@@ -1,6 +1,26 @@
-# EPM — Amigos Fundadores V2
+# EPM — Amigos Fundadores V2.2
 
 Site estático em **HTML + CSS + JavaScript**, pronto para GitHub Pages, com **Supabase** opcional para banco de dados e autenticação da área administrativa.
+
+
+## V2.2 — adesão transparente em três telas
+
+O Programa Apoiador Fundador — Crédito Vale agora usa uma sequência obrigatória de apresentação:
+
+1. **Quadro-resumo** com a regra “100% do apoio vira Crédito Vale” e o aviso em destaque “o percentual de utilização varia conforme o produto ou serviço”.
+2. **Termo completo** antes do valor. No fluxo de Amigo Fundador, o botão para a terceira etapa é liberado após percorrer o Termo.
+3. **Valor, forma de pagamento, dados e checkbox obrigatório de aceite**.
+
+O site também exibe antes da adesão as limitações mais relevantes:
+- e-books elegíveis: até 100%;
+- livros impressos: até R$ 20 de Crédito Vale por exemplar;
+- produção musical: mínimo de R$ 150 em pagamento monetário por música após aplicação do crédito;
+- aulas elegíveis: até 100% conforme saldo/disponibilidade;
+- crédito não é investimento, não é sacável e não rende juros.
+
+O Termo completo está também em `termo.html`.
+
+Responsável exibido no site: **Instituto Musical Vale — CNPJ 31.255.200/0001-19**.
 
 ## O que mudou na V2
 

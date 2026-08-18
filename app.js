@@ -107,15 +107,98 @@
   const statusEl = $('#formStatus');
   const submitBtn = $('#submitBtn');
   const demoBanner = $('#demoBanner');
+  const wizardScreens = $$('[data-wizard-step]');
+  const wizardDots = $$('[data-step-dot]');
+  const termScroll = $('#termScroll');
+  const termContinue = $('#termContinue');
+  const termReadStatus = $('#termReadStatus');
+  const friendSummary = $('#friendSummary');
+  const businessSummary = $('#businessSummary');
+  const friendTermsStep = $('#friendTermsStep');
+  const businessTermsStep = $('#businessTermsStep');
+  const friendAmountChoices = $('#friendAmountChoices');
+  const friendFinalReminder = $('#friendFinalReminder');
+  const termsAcceptedLabel = $('#termsAcceptedLabel');
+  const submitLabel = $('#submitBtn span');
+  let currentWizardStep = 1;
+  let friendTermRead = false;
 
   if (form && !isConfigured) demoBanner.hidden = false;
+
+  const isBusinessProgram = () => {
+    const p = programInput?.value || 'Amigo Fundador';
+    return p !== 'Amigo Fundador';
+  };
+
+  function updateFlowMode() {
+    const business = isBusinessProgram();
+    if (friendSummary) friendSummary.hidden = business;
+    if (businessSummary) businessSummary.hidden = !business;
+    if (friendTermsStep) friendTermsStep.hidden = business;
+    if (businessTermsStep) businessTermsStep.hidden = !business;
+    if (friendAmountChoices) friendAmountChoices.hidden = business;
+    if (friendFinalReminder) friendFinalReminder.hidden = business;
+
+    if (termContinue) {
+      termContinue.disabled = business ? false : !friendTermRead;
+    }
+    if (termsAcceptedLabel) {
+      termsAcceptedLabel.innerHTML = business
+        ? '<strong>Confirmo que este envio é uma manifestação de interesse institucional</strong> e compreendo que patrocínio/parceria depende de proposta ou contrato próprio e confirmação das condições pela equipe. *'
+        : '<strong>Li e aceito o Termo de Adesão ao Programa Apoiador Fundador — Crédito Vale</strong> e confirmo que compreendi o quadro-resumo, inclusive que 100% do apoio gera saldo nominal, mas o percentual de utilização varia conforme o produto ou serviço. *';
+    }
+    if (submitLabel) submitLabel.textContent = business ? 'Registrar interesse institucional' : 'Registrar minha adesão';
+  }
+
+  function setWizardStep(step, { scroll = false } = {}) {
+    const target = Math.max(1, Math.min(3, Number(step) || 1));
+    if (target === 3 && !isBusinessProgram() && !friendTermRead) return;
+    currentWizardStep = target;
+    wizardScreens.forEach(screen => {
+      const active = Number(screen.dataset.wizardStep) === target;
+      screen.hidden = !active;
+      screen.classList.toggle('active', active);
+    });
+    wizardDots.forEach(dot => {
+      const n = Number(dot.dataset.stepDot);
+      dot.classList.toggle('active', n === target);
+      dot.classList.toggle('done', n < target);
+      dot.setAttribute('aria-current', n === target ? 'step' : 'false');
+    });
+    updateFlowMode();
+    updateSummary(programInput?.value, amountInput?.value);
+    if (scroll) $('#apoie')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  $('#step1Continue')?.addEventListener('click', () => setWizardStep(2, { scroll: true }));
+  termContinue?.addEventListener('click', () => setWizardStep(3, { scroll: true }));
+  $$('[data-back-step]').forEach(btn => btn.addEventListener('click', () => setWizardStep(btn.dataset.backStep, { scroll: true })));
+
+  function refreshTermReadState() {
+    if (!termScroll || friendTermRead) return;
+    const reachedEnd = termScroll.scrollTop + termScroll.clientHeight >= termScroll.scrollHeight - 24;
+    if (reachedEnd) {
+      friendTermRead = true;
+      if (termContinue) termContinue.disabled = false;
+      if (termReadStatus) {
+        termReadStatus.textContent = 'Termo percorrido até o final. Você pode continuar para a etapa de adesão.';
+        termReadStatus.classList.add('ok');
+      }
+    }
+  }
+  termScroll?.addEventListener('scroll', refreshTermReadState);
+  window.setTimeout(refreshTermReadState, 300);
 
   function updateSummary(program = programInput?.value || 'Amigo Fundador', amount = amountInput?.value) {
     if (!summary) return;
     const strong = $('strong', summary);
     const value = $('b', summary);
     strong.textContent = program || 'Amigo Fundador';
-    value.textContent = amount && Number(amount) > 0 ? `Valor pretendido: ${money(amount)}` : 'Nenhum valor selecionado';
+    if (currentWizardStep < 3) {
+      value.textContent = 'O valor será exibido somente na etapa 3.';
+    } else {
+      value.textContent = amount && Number(amount) > 0 ? `Valor pretendido: ${money(amount)}` : 'Nenhum valor selecionado';
+    }
   }
 
   function selectProgram(program) {
@@ -127,6 +210,7 @@
     });
     if (program === 'Empresa / Patrocínio' && profileType && !profileType.value) profileType.value = 'Empresa / marca';
     if (program === 'Parceiro Técnico' && profileType && !profileType.value) profileType.value = 'Profissional / prestador';
+    updateFlowMode();
     updateSummary(program, amountInput?.value);
   }
 
@@ -160,6 +244,7 @@
     selectProgram(tier === 'Parceiro Técnico' ? 'Parceiro Técnico' : `Empresa / Patrocínio — ${tier}`);
     if (amountInput) amountInput.value = amount;
     if (profileType) profileType.value = tier === 'Parceiro Técnico' ? 'Profissional / prestador' : 'Empresa / marca';
+    setWizardStep(1);
     updateSummary(programInput.value, amount);
     $('#apoie')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }));
@@ -212,8 +297,11 @@
       motivation: sanitize(fd.get('motivation')) || null,
       best_contact_period: sanitize(fd.get('best_contact_period')) || null,
       allow_name_public: fd.get('allow_name_public') === 'true',
-      lgpd_consent: fd.get('lgpd_consent') === 'on',
-      consent_version: 'EPM-AF-V2-2026-08'
+      lgpd_consent: fd.get('terms_accepted') === 'on',
+      terms_accepted: fd.get('terms_accepted') === 'on',
+      terms_version: isBusinessProgram() ? 'MANIFESTACAO-INSTITUCIONAL-V2.2' : '1.0 — agosto de 2026',
+      marketing_opt_in: fd.get('marketing_opt_in') === 'on',
+      consent_version: isBusinessProgram() ? 'EPM-INSTITUCIONAL-V2.2-2026-08' : 'EPM-CREDITO-VALE-1.0-2026-08'
     };
 
     submitBtn.disabled = true;
@@ -245,11 +333,18 @@
 
       form.reset();
       programInput.value = 'Amigo Fundador';
-      $$('.program-choice').forEach(btn => btn.classList.toggle('active', btn.dataset.program === 'Amigo Fundador'));
       $$('#amountGrid [data-amount]').forEach(btn => btn.classList.remove('selected'));
+      friendTermRead = false;
+      if (termScroll) termScroll.scrollTop = 0;
+      if (termContinue) termContinue.disabled = true;
+      if (termReadStatus) {
+        termReadStatus.textContent = 'Role o documento até o final para continuar.';
+        termReadStatus.classList.remove('ok');
+      }
+      setWizardStep(1);
       updateSummary('Amigo Fundador', '');
       setStatus(isConfigured
-        ? 'Cadastro registrado com sucesso. Obrigado por considerar fazer parte da fase fundadora da EPM. Nossa equipe poderá entrar em contato para confirmar os próximos passos.'
+        ? 'Registro concluído. A equipe poderá entrar em contato para confirmar o meio de pagamento e os próximos passos.'
         : 'Teste salvo neste navegador. Configure o Supabase para receber cadastros reais e atualizar a meta pública.', 'ok');
       await loadPublicStats();
     } catch (err) {
@@ -261,6 +356,8 @@
     }
   });
 
+  updateFlowMode();
+  setWizardStep(1);
   loadPublicStats();
   if (isConfigured) window.setInterval(loadPublicStats, 60000);
 })();
