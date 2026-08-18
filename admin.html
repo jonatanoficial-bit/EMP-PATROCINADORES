@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Admin | Parceiros EPM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="admin-header">
+    <a class="brand" href="index.html"><img src="assets/logo-epm.png" alt="Logo EPM" /><span><strong>EPM</strong><small>Administração</small></span></a>
+    <div id="adminIdentity" class="admin-identity" hidden><span id="adminEmail"></span><button id="logoutBtn" class="btn-small" type="button">Sair</button></div>
+  </header>
+
+  <main class="admin-main">
+    <section id="loginView" class="login-shell">
+      <div class="login-card">
+        <img src="assets/logo-epm.png" alt="Engenharia da Produção Musical" />
+        <span class="eyebrow">ÁREA RESTRITA</span>
+        <h1>Painel de patrocinadores</h1>
+        <p>Entre com uma conta de administrador autorizada.</p>
+        <div id="adminDemoNotice" class="demo-banner" hidden><strong>Modo demonstração:</strong> Supabase não configurado. Use qualquer e-mail e senha para visualizar os testes salvos neste navegador.</div>
+        <form id="loginForm">
+          <label class="field"><span>E-mail</span><input name="email" type="email" required autocomplete="username" placeholder="admin@dominio.com" /></label>
+          <label class="field"><span>Senha</span><input name="password" type="password" required autocomplete="current-password" placeholder="••••••••" /></label>
+          <button class="btn btn-gold btn-submit" type="submit">Entrar no painel</button>
+          <p id="loginStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="dashboardView" class="dashboard" hidden>
+      <div class="dashboard-head">
+        <div><span class="eyebrow">CONTROLE INTERNO</span><h1>Parceiros & Apoiadores</h1><p>Cadastro, acompanhamento e exportação das manifestações de interesse.</p></div>
+        <button id="refreshBtn" class="btn btn-ghost" type="button">Atualizar dados</button>
+      </div>
+
+      <div class="stats-grid">
+        <article><span>Total de cadastros</span><strong id="statTotal">0</strong><small>registros</small></article>
+        <article><span>Interesse financeiro</span><strong id="statInterest">R$ 0</strong><small>valor informado</small></article>
+        <article><span>Apoios confirmados</span><strong id="statConfirmed">R$ 0</strong><small>controle administrativo</small></article>
+        <article><span>Novos contatos</span><strong id="statNew">0</strong><small>aguardando retorno</small></article>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-wrap"><input id="searchInput" type="search" placeholder="Buscar por nome, e-mail, WhatsApp, cidade..." /></div>
+        <select id="statusFilter" aria-label="Filtrar por status"><option value="">Todos os status</option><option value="novo">Novo</option><option value="contato">Em contato</option><option value="reuniao">Reunião</option><option value="confirmado">Confirmado</option><option value="pago">Recebido</option><option value="pausado">Pausado</option><option value="encerrado">Encerrado</option></select>
+        <button id="exportBtn" class="btn-small gold" type="button">Exportar CSV</button>
+      </div>
+
+      <div class="table-card">
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Data</th><th>Nome</th><th>Contato</th><th>Local</th><th>Interesse</th><th>Valor</th><th>Status</th><th></th></tr></thead>
+            <tbody id="leadsBody"><tr><td colspan="8" class="empty-cell">Carregando...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="leadDialog" class="lead-dialog">
+    <form method="dialog"><button class="dialog-close" aria-label="Fechar">×</button></form>
+    <div id="leadDialogContent"></div>
+  </dialog>
+
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
