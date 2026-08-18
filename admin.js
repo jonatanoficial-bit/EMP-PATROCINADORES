@@ -37,9 +37,14 @@
   }
 
   async function verifyAdmin(user) {
-    if (!user) return false;
+    if (!user?.email) return false;
     if (!isConfigured) return true;
-    const { data, error } = await db.from('admins').select('user_id,email').eq('user_id', user.id).maybeSingle();
+    const email = String(user.email).trim().toLowerCase();
+    const { data, error } = await db
+      .from('admin_allowlist')
+      .select('email')
+      .eq('email', email)
+      .maybeSingle();
     if (error) throw error;
     return !!data;
   }

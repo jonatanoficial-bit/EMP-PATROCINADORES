@@ -1,0 +1,18 @@
+EPM AMIGOS FUNDADORES — V2.1 CONFIGURADA
+
+Supabase conectado:
+https://efmoaxghowrrtuyvvzqo.supabase.co
+
+Administradores autorizados:
+- empengenhariadaproducaomusical@gmail.com
+- sacvaleproducao@gmail.com
+
+Arquivos que precisam substituir a versão publicada:
+- config.js
+- admin.js
+
+Você também pode substituir a pasta inteira pelo conteúdo deste pacote.
+
+IMPORTANTE:
+- A chave usada no config.js é a Publishable Key pública do Supabase.
+- Nenhuma service_role/secret key está incluída.
